@@ -4,4 +4,5 @@ import { defineConfig } from "vite";
 
 export default defineConfig({
   plugins: [react({ include: "./src/**/*.{jsx,tsx}" })],
+  base: "/datadog-rum-react",
 });
