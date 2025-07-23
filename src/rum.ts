@@ -14,4 +14,10 @@ datadogRum.init({
   sessionReplaySampleRate: 100,
   defaultPrivacyLevel: "mask-user-input",
   plugins: [reactPlugin({ router: false })],
+  beforeSend: (event) => {
+    if (event.type === "resource") {
+      console.log("Resource event:", event);
+    }
+    return true;
+  },
 });
